@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An experienced software development company offering comprehensive support to businesses in creating and managing software resources. Specializing in diverse operational areas including Inventory, HR, Payroll, Accounting, Business and e-commerce solutions, website design, mobile apps, and educational portals. Our tailored services range from off-the-shelf products to fully customized solutions, catering to businesses of all sizes. With a proven track record, we possess the expertise to elevate businesses, regardless of scale, to achieve greater success.">
+    <meta name="keywords" content="Business , IT, Technologies, Web design, Technology Solutions,
+IT Services,
+Software Development,
+Cybersecurity Solutions,
+Cloud Computing,
+Network Infrastructure,
+Data Analytics,
+Artificial Intelligence,
+Mobile App Development,
+Web Development,
+IT Consulting,
+Managed IT Services,
+IT Support,
+Digital Transformation,
+Internet of Things (IoT),
+Blockchain Technology,
+IT Outsourcing,
+Software Integration,
+Enterprise Solutions,
+IT Security Services">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="1">
+<meta name="refresh time" content="1">
+<meta name="copyright" content="topchoicetech.com.ng">
+<meta name="author" content="Topchoice Information Technology">
+<meta name="language" content="English">
+<meta name="revisit-after" content="1">
+<meta property="og:title" content="IT Company in Abuja 2025 | Topchoice Information Technology">
+<meta property="og:title" content="Software Company in Abuja 2025 | Topchoice Information Technology">
+<meta property="og:title" content="Website Development Company in Abuja 2025 | Topchoice Information Technology">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.topchoicetech.com.ng/abuja">
+<!-- <meta property="og:image" content="https://www.myjobmag.com/images/myjobmag.png"> -->
+<meta property="og:image" content="https://www.topchoicetech.com.ng/images/topchoice.png">
+<meta property="og:site_name" content="Topchoice Information Technology">
+<meta property="og:description" content="Find website/software developer in Abuja.
+Get the right website/software developer in Abuja today.
+Discover hundreds of the softwares and websites for you in Abuja States. Get your website now ">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <title>Josh Adava Limited</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<!-- Icon Font Stylesheet -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+<!-- or -->
+<link rel="stylesheet"
+href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/main1.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <script src="assets/js/main1.js" defer></script>
+    <script src="assets/js/carousel.js" defer></script>
+</head>
+<body>
+
+
+    <div class='major' >
+
+    </div>
+        <div class="row">
+
+            <div class="contact top-50 " style="background: #23A8F2;">
+                <div class='row-center'><h3 style="color: #FFF; text-transform:uppercase;">Sign up your account</h3></div>
+                <form class='contact-form'>
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label for="fullname">fullname <span> *</span> &nbsp;:</label>
+                            <input type="text" name='fullname' class="form-control" placeholder='' required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span>*</span> :</label>
+                            <input type="text" name='email' placeholder="Enter contact your email" id="email" class="form-control password"
+                            autocomplete="false"
+                            placeholder='email' required/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone <span>*</span> :</label>
+                            <input type="text" name='phone' class="form-control password"
+                             placeholder='Enter your contact phone number' required/>
+                        </div>
+                        <div class="form-group">
+                            <label for="product">Service <span>*</span> :</label>
+                            <select name="product" id="" class="form-control" required>
+                                <option value="">-- select --</option>
+                                <option value="">Electrical Construction</option>
+                                <option value="">Ac installation</option>
+                                <option value="">Inverter installation</option>
+                                <option value="">CCTV installation</option>
+                                <option value="">Inverter & panels accessories</option>
+                                <option value="">Electric fence</option>
+                                <option value="">General contractor</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company <span>*</span> :</label>
+                            <select name="company" id="" class="form-control">
+                                <option value=""></option>
+                                <option value="">IT Services</option>
+                                <option value="">Agency</option>
+                                <option value="">Agriculture</option>
+                                <option value="">Estate</option>
+                                <option value="">Government</option>
+                                <option value="">Entertainment</option>
+                                <option value="">School</option>
+                                <option value="">church</option>
+                                <option value="">Health</option>
+                                <option value="">Business</option>
+                                <option value="">NGO</option>
+                                <option value="">Consultancy</option>
+                                <option value="">Software &amp; Hi-tech</option>
+                                <option value="">Accounting Firm</option>
+                                <option value="">Architecture &amp; Engineering</option>
+                                <option value="">Other</option>
+                            </select>
+                        </div>
+                        <br/>
+                      <div class="form-group">
+                          <button type='submit' class='submit-btn'style="padding:12px" >
+                              Get in Touch
+                          </button>
+                      </div>
+
+                  </form>
+                </div>
+        </div>
+        </div>
+</body>
+</html>
