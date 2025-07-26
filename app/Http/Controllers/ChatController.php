@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class ChatController extends Controller
 {
+    private $counter = 1;
     public function index()
     {
         return view('chat');
@@ -21,54 +22,29 @@ class ChatController extends Controller
         $message->save();
 
         $lastId = Message::max("id");
-        session(['last_id' => $lastId]);
+        session(['new_id' => $lastId]);
         return response()->json(['status' => 'Message sent']);
     }
 
-    public function stream()
+    public function stream(Request $request)
     {
-        // header('Content-Type: text/event-stream'); //set header text/event-stream for event streaming
-        // header('Cache-Control: no-cache');
-        // header('Connection: keep-alive');
+        header('Content-Type: text/event-stream');
+        header('Cache-Control: no-cache');
+        header('Connection: keep-alive');
 
         $data = [];
+        $newId = session("new_id");
+        $data = Message::where('id', '=', $newId)->first();
 
-        // ob_flush();
-        // flush();
-
-        $response = new StreamedResponse(function () {
-            $i = 1;
-            while (true) {
-                $LId = request()->get('last_id');
-                $newMessages = Message::where('id', '>', $LId)->get();
-                $latestID = session("last_id");
-
-                if (empty(session('last_id'))) {
-                    $data = Message::all();
-                } else {
-                    $lastId = Message::max("id");
-                    $data = Message::where("id", $latestID)->get();
-                }
-
-                // if ($newMessages->count()) {
-                //     foreach ($newMessages as $msg) {
-                //         echo "data: " . json_encode($i) . "\n\n";
-                //         ob_flush();
-                //         flush();
-                //     }
-                // }
-
-                sleep(1);
-                $i++;
-            }
-        });
-
-        $response->headers->set('Content-Type', 'text/event-stream');
-        $response->headers->set('Cache-Control', 'no-cache');
-        $response->headers->set("X-Accel-Buffering", "no");
-        $response->headers->set("Connection", "keep-alive");
-
-        return $response;
+        if ($data && $request->last_id < $newId) {
+            $data->last_id = $request->last_id;
+            echo "data: " . json_encode($data) . "\n\n";
+        } else {
+            echo "\n\n";
+        }
+        $this->counter++;
+        ob_flush();
+        flush();
     }
 }
 

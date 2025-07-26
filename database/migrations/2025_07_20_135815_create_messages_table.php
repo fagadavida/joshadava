@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string('username');
             $table->text('message');
+            $table->decimal(1)->default(0);
             $table->timestamps();
         });
 

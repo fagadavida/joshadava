@@ -17,13 +17,14 @@
 
     <script>
         const messagesDiv = document.getElementById('messages');
-        let lastId = 0;
+        let lastId = localStorage.getItem("lastId") ? JSON.parse(localStorage.getItem("lastId")):0;
 
         const evtSource = new EventSource(`/stream?last_id=${lastId}`);
 
         evtSource.onmessage = function(event) {
             const msg = JSON.parse(event.data);
-            // lastId = msg.id;
+            this.lastId = msg.id;
+            localStorage.setItem("lastId", msg.id)
             console.log(msg)
             const line = `<p><strong>${msg.id} ${msg.username}:</strong> ${msg.message}</p>`;
             messagesDiv.innerHTML += line;

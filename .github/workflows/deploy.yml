@@ -1,39 +1,17 @@
-name: Deploy Laravel App
-
-on:
-  push:
-    branches:
-      - main # Trigger on pushes to the main branch
+on: push
+name: 🚀 Deploy website on push
 jobs:
-  deploy:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
+      - name: 🚚 Get latest code
         uses: actions/checkout@v4
-      - name: Set up php
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: 8.3
-      - name: Create Database
-        run: touch ./database/database.sqlite
-      - name: Copy .env
-        run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-      - name: Install Composer dependencies
-        run: composer install --prefer-dist --no-progress --no-suggest --optimize-autoloader
-      - name: Run migrations
-        run: php artisan migrate
 
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.0 # Use a pre-built FTP deploy action
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }} # FTP server address (stored as a secret)
-          username: ${{ secrets.FTP_USERNAME }} # FTP username (stored as a secret)
-          password: ${{ secrets.FTP_PASSWORD }} # FTP password (stored as a secret)
-          # local-dir: ./build/ # Local directory to deploy from
-          # server-dir: /public_html/ # Remote directory to deploy to
-          # state-name: .ftp-deploy-state # Optional: for tracking deployed files
-          # exclude: | # Optional: files/folders to exclude
-          #   .git/
-          #   .github/
-          #   node_modules/
+          server: ${{ secrets.ftp_server }}
+          username: ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
+          server-dir: ${{secrets.server_dir}}
